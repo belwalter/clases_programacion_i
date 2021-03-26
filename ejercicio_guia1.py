@@ -1,7 +1,5 @@
 
 
-# zermaten, guiffrey
-
 # ejercicio 1
 # base = float(input('ingrese el valor de la base '))
 # altura = float(input('ingrese el valor de la altura '))
