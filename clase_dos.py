@@ -93,23 +93,138 @@
 # else:
 #     print('no es multiplo de 2 ni de 5')
 
-monto = float(input("ingrese el monto "))
-tarjeta = input("ingrese tarjeta ")
-coutas = int(input('ingrese el numero de cuotas '))
+# monto = float(input("ingrese el monto "))
+# tarjeta = input("ingrese tarjeta ")
+# coutas = int(input('ingrese el numero de cuotas '))
 
-if(coutas == 3):
-    monto = monto * 1.03  # 3 * monto / 100     (monto * 0.3) + monto
-elif(coutas == 8):
-    monto = monto * 1.17
-elif(coutas == 12):
-    monto = monto * 1.32
+# if(coutas == 3):
+#     monto = monto * 1.03  # 3 * monto / 100     (monto * 0.3) + monto
+# elif(coutas == 8):
+#     monto = monto * 1.17
+# elif(coutas == 12):
+#     monto = monto * 1.32
 
 
-if(tarjeta == 'visa'):
-    recargo_visa = monto * 1.07
-    print('monto total:', recargo_visa)
-elif(tarjeta == 'mastercard'):
-    recargo_master = monto * 1.11
-    print('monto total:', recargo_master)
-else:
-    print('monto total:', monto)
+# if(tarjeta == 'visa'):
+#     recargo_visa = monto * 1.07
+#     print('monto total:', recargo_visa)
+# elif(tarjeta == 'mastercard'):
+#     recargo_master = monto * 1.11
+#     print('monto total:', recargo_master)
+# else:
+#     print('monto total:', monto)
+
+# dia = int(input('ingrese el numero del dia '))
+# mes = int(input('ingrese el numero del mes '))
+# anio = int(input('ingrese el año '))
+
+
+
+# if(mes >= 1 and mes <= 12):
+#     if(mes == 2):
+#         # print('el tiempo tiene 28 dias')
+#         if(dia >=1 and dia <= 28):
+#             if(dia == 28):
+#                 dia = 1
+#                 mes += 1
+#             else:
+#                 dia += 1
+#             # print('fecha correcta')
+#     elif(mes == 4 or mes == 6 or mes == 9 or mes == 11):
+#         # print('el mes tiene 30 dias')
+#         if(dia >=1 and dia <= 30):
+#             if(dia == 30):
+#                 dia = 1
+#                 mes += 1
+#             else:
+#                 dia += 1
+#     else:
+#         # print('el mes tiene 31')
+#         if(dia >=1 and dia <= 31):
+
+#             if(dia == 31):
+#                 dia = 1
+#                 mes += 1
+#             else:
+#                 dia += 1
+
+#             if(mes == 13):
+#                 mes = 1
+#                 anio += 1 # anio = anio + 1
+    
+#     print(dia,'/',mes,"/",anio)
+# else:
+#     print('numero de mes incorrecto')
+
+
+# temperatura = float(input('ingrese el valor de la temperatura '))
+# escala = input('ingrese la escala C|F ')
+
+# if(escala == 'C'):
+#     print('la temperatura el grados farenheit es', (temperatura * 9/5) + 32)
+# elif(escala == 'F'):
+#     print('la temperatura el grados celsius es', (temperatura - 32) * 5/9)
+# else:
+#     print('la escala ingresada es incorrecta')
+
+# num1 = int(input('ingrese valor de la carta 1 '))
+# palo1 = input('ingrese palo de la carta 1 ')
+# num2 = int(input('ingrese valor de la carta 2 '))
+# palo2 = input('ingrese palo de la carta 2 ')
+# num3 = int(input('ingrese valor de la carta 3 '))
+# palo3 = input('ingrese palo de la carta 3 ')
+
+# if(palo1 == palo2 and palo1 == palo3):
+#     puntos = 20
+#     if(num1 <=7):
+#         puntos += num1
+#     if(num2 <=7):
+#         puntos += num2
+#     if(num3 <=7):
+#         puntos += num3
+#     print('flor ', puntos)
+# elif(palo1 == palo2 or palo1 == palo3 or palo2 == palo3):
+#     puntos = 20
+#     if(palo1 == palo2):
+#         if(num1 <=7):
+#             puntos += num1
+#         if(num2 <=7):
+#             puntos += num2
+#     elif(palo1 == palo3):
+#         if(num1 <=7):
+#             puntos += num1
+#         if(num3 <=7):
+#             puntos += num3
+#     elif(palo2 == palo3):
+#         if(num2 <=7):
+#             puntos += num2
+#         if(num3 <=7):
+#             puntos += num3
+#     print('envido', puntos)
+
+num1 = int(input('ingrese un numero '))
+num2 = int(input('ingrese un numero '))
+num3 = int(input('ingrese un numero '))
+num4 = int(input('ingrese un numero '))
+num5 = int(input('ingrese un numero '))
+
+
+cantidad_multiplos_3 = 0 #! contador
+
+if(num1 % 3 == 0):
+    cantidad_multiplos_3 += 1
+    
+if(num2 % 3 == 0):
+    cantidad_multiplos_3 += 1
+
+if(num3 % 3 == 0):
+    cantidad_multiplos_3 += 1
+
+if(num4 % 3 == 0):
+    cantidad_multiplos_3 += 1
+
+if(num5 % 3 == 0):
+    cantidad_multiplos_3 += 1
+
+print('cantidad de multiplos de 3', cantidad_multiplos_3)
+
