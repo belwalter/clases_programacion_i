@@ -1,11 +1,14 @@
 
-#! robias gonzalez presente 
-
 #! CICLOS - FUNCIONES y MODULOS - ESTRUCTURAS DE DATOS - STRING
 
 #! Array o vectores (estatico) --> Listas dinamicas
 
-datos = [2, 3, 4, 7, 0, 1, 56, 6] 
+import mis_funciones
+
+datos = [2, 3, 4, 7, 0, 1, 56, 6]
+
+mis_funciones.agregar(datos, 100)
+print(datos)
 
 #! Ciclos while (condicionado) for (finito)
 
@@ -28,13 +31,6 @@ datos = [2, 3, 4, 7, 0, 1, 56, 6]
 # for numero in datos:
 #     if(numero == 45):
 #         print('45 esta en la lista')
-
-
-
-
-
-
-
 
 
 
@@ -85,7 +81,13 @@ datos = [2, 3, 4, 7, 0, 1, 56, 6]
 #     if(numero % 2 == 0 and numero % 3 == 0):
 #         print('es multiplo de 2 y de 3')
 
-# datos = []
+# datos = [['walter', 34], ['tito', 20], ['ana', 54]]
+
+# for i in range(0, len(datos)):
+#     print(i, datos[i][0], datos[i][1])
+
+# for persona in datos:
+#     print(persona[0], persona[1])
 
 # for i in range (0, 3):
 #     nombre = input("ingrese su nombre ").capitalize()
@@ -133,19 +135,21 @@ datos = [2, 3, 4, 7, 0, 1, 56, 6]
 
 # print('el maximo es', maximo)
 
-positivos = 0
-negativos = 0
+# positivos = 0
+# negativos = 0
 
-numero = int(input('ingrese un numero '))
+# numero = int(input('ingrese un numero '))
 
-while(numero != 0):
-    if(numero > 0):
-        positivos += 1
-    else:
-        negativos += 1
+# while(numero != 0):
+#     if(numero > 0):
+#         positivos += 1
+#     else:
+#         negativos += 1
     
-    numero = int(input('ingrese un numero '))
+#     numero = int(input('ingrese un numero '))
 
-print('cantidad de positivos', positivos)
-print('cantidad de negativos', negativos)
+# print('cantidad de positivos', positivos)
+# print('cantidad de negativos', negativos)
+
+
 
