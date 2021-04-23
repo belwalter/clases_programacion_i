@@ -3,13 +3,27 @@ from funciones import calculadora, es_vocal
 
 
 
-# num1 = int(input('ingrese un numero '))
-# operador = input('ingrese el operador ')
-# num2 = int(input('ingrese un numero '))
+def altura(item):
+    # print(item, type(item))
+    if(item['height'].isdecimal()):
+        return int(item['height'])
+    else:
+        return -1
 
-# print(calculadora(num1, operador, num2))
+def peso(item):
+    if(item['mass'].isdecimal()):
+        return float(item['mass'])
+    else:
+        return -1
 
-palabra = input('ingrese una palabra ')
 
-for letra in palabra:
-    print(es_vocal(letra))
+
+from consumo_api import get_data_sw_characters
+
+sw_data = get_data_sw_characters()
+
+# #! TIMSORT
+sw_data.sort(key=peso)
+
+for index, character in enumerate(sw_data):
+    print(character['name'], character['height'], character['mass'])

@@ -2,10 +2,8 @@
 import json
 import requests
 
-#sw_data = []
 
-
-def get_personajes(ruta):
+def get_docs(ruta):
     req = requests.get(ruta)
     # Imprimimos el resultado si el código de estado HTTP es 200 (OK):
     if req.status_code == 200:
@@ -13,21 +11,30 @@ def get_personajes(ruta):
         return dic
 
 
-result = get_personajes("https://swapi.dev/api/people/190")
+def get_data_sw_characters():
+
+    sw_data = []
+
+    result = get_docs("https://swapi.dev/api/people/")
+    while(result["next"] is not None):
+        for doc in result["results"]:
+            # print(doc['name'])
+            sw_data.append(doc) #print(doc["name"], doc["url"][28:-1])
+        result = get_docs(result["next"])
+    
+    return sw_data
 
 
-for key in result:
-    print(key, ':', result[key])
 
 
-# while(result["next"] is not None):
-#     for doc in result["results"]:
-#         sw_data.append(doc) #print(doc["name"], doc["url"][28:-1])
-#     result = get_docs(result["next"])
 
-# for index, character in enumerate(sw_data):
-#     print(index)
-#     print(character)
+
+
+# print(result)
+# for key in result:
+#     print(key, ':', result[key])
+
+
 #dic = get_docs("https://swapi.dev/api/starships/")
 #while(dic["next"] is not None):
 #    for doc in dic["results"]:
