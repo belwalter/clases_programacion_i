@@ -59,13 +59,23 @@ print(sumatoria(6))
 
 #! DICCIONARIOS clave-valor
 
-json = [{'nombre':'walter', 'edad':30},{'nombre':'Tito', 'edad':30}, {'nombre':'Ana', 'edad':30}]
+json = [{'nombre':'walter', 'edad':30},
+        {'nombre':'Tito', 'edad':30}, 
+        {'nombre':'Ana', 'edad':30}]
 
 for persona in json:
     print(persona['nombre'], persona['edad'])
 
-dic = {}
+dic = {13 : 'Julieta'}
 print(dic)
+
+
+key = '144'
 
 dic['14'] = 'Ana'
 print(dic)
+
+if(key in dic):
+    print(dic[key])
+else:
+    print('la clave no esta')
