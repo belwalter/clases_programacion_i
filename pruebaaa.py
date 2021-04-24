@@ -2,6 +2,8 @@
 from funciones import calculadora, es_vocal
 
 
+def nombre(item):
+    return item['name']
 
 def altura(item):
     # print(item, type(item))
@@ -22,8 +24,8 @@ from consumo_api import get_data_sw_characters
 
 sw_data = get_data_sw_characters()
 
-# #! TIMSORT
-sw_data.sort(key=peso)
+#! TIMSORT
+sw_data.sort(key=nombre)
 
 for index, character in enumerate(sw_data):
     print(character['name'], character['height'], character['mass'])
