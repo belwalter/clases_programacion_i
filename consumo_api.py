@@ -33,11 +33,29 @@ def get_all_sw_characters():
     
     return sw_data
 
+def get_all_sw_characters_names():
+    
+    sw_data = []
 
+    data = get_docs("https://swapi.dev/api/people/")
 
+    while(data["next"] is not None):
+        for personaje in data["results"]:
+            sw_data.append(personaje['name']) #print(doc["name"], doc["url"][28:-1])
+        data = get_docs(data["next"])
+    
+    return sw_data
+
+def get_planeta(url):
+    planeta = get_docs(url)
+    return planeta['name']
 
 # print(get_all_sw_characters())
-# print(get_charter_by_id(20))
+data = get_charter_by_id(1)
+data['homeworld'] = get_planeta(data['homeworld'])
+print(data)
+# if(data['homeworld'] == "http://swapi.dev/api/planets/1/"):
+#     print('pertenece a tatooine')
 # print(search_characters_by_name('sky'))
 
 

@@ -17,4 +17,18 @@ datos = [[2, 4, 3], [6, 1, 'abd'], [0, 9]]
 #     datos.append(randint(0, 20))
 # print(datos)
 
-print(4 in datos)
+# print(4 in datos)
+
+
+
+a = ['a', 'b', 'c', 'd']
+
+for index, letra in enumerate(a):
+    if(letra == 'b'):
+        print(index, letra)
+
+for i in range(len(a)):
+    if(a[i]=='b'):
+        print(i, a[i])
+
+# print(a[1])
