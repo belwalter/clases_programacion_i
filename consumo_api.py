@@ -11,23 +11,34 @@ def get_docs(ruta):
         return dic
 
 
-def get_data_sw_characters():
+def get_charter_by_id(id):
+    data = get_docs("https://swapi.dev/api/people/"+str(id))
+    return data
+
+
+def search_characters_by_name(name):
+    data = get_docs("https://swapi.dev/api/people?search="+str(name))
+    return data['results']
+
+def get_all_sw_characters():
 
     sw_data = []
 
-    result = get_docs("https://swapi.dev/api/people/")
-    while(result["next"] is not None):
-        for doc in result["results"]:
-            # print(doc['name'])
-            sw_data.append(doc) #print(doc["name"], doc["url"][28:-1])
-        result = get_docs(result["next"])
+    data = get_docs("https://swapi.dev/api/people/")
+
+    while(data["next"] is not None):
+        for personaje in data["results"]:
+            sw_data.append(personaje) #print(doc["name"], doc["url"][28:-1])
+        data = get_docs(data["next"])
     
     return sw_data
 
 
 
 
-
+# print(get_all_sw_characters())
+# print(get_charter_by_id(20))
+# print(search_characters_by_name('sky'))
 
 
 # print(result)
