@@ -51,9 +51,10 @@ def get_planeta(url):
     return planeta['name']
 
 # print(get_all_sw_characters())
-data = get_charter_by_id(1)
-data['homeworld'] = get_planeta(data['homeworld'])
-print(data)
+
+# data = get_charter_by_id(1)
+# data['homeworld'] = get_planeta(data['homeworld'])
+# print(data)
 # if(data['homeworld'] == "http://swapi.dev/api/planets/1/"):
 #     print('pertenece a tatooine')
 # print(search_characters_by_name('sky'))

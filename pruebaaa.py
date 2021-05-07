@@ -38,24 +38,27 @@ from consumo_api import get_all_sw_characters, get_all_sw_characters_names
 sw_data = get_all_sw_characters()
 
 #! TIMSORT
-# sw_data.sort(key=color_pelo)
+sw_data.sort(key=peso)
 
-buscado = 'Yoda'
+# buscado = 'Yoda'
 
-posicion = busqueda(sw_data, buscado)
+# posicion = busqueda(sw_data, buscado)
 
-if(posicion > -1):
-    print(buscado, 'esta en la lista en la posicion', posicion)
-    # sw_data[posicion]['species'] = "desconosido"
-    print('info ->')
-    print(sw_data[posicion])
-    # sw_data.pop(posicion)
-else:
-    print(buscado, 'no esta en la lista')
+# if(posicion > -1):
+#     print(buscado, 'esta en la lista en la posicion', posicion)
+#     # sw_data[posicion]['species'] = "desconosido"
+#     print('info')
+#     print(sw_data[posicion])
+#     # sw_data.pop(posicion)
+# else:
+#     print(buscado, 'no esta en la lista')
 
 
 
-# for character in sw_data:
+for character in sw_data:
+    if(character['mass'].isdecimal()):
+        if(int(character['mass']) >= 100):
+            print(character['name'], character['mass'])
     
     # print(character['name'])
     # print(character['name'], character['height'], character['mass'])
