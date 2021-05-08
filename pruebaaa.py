@@ -35,10 +35,10 @@ def busqueda(lista, buscado):
 from consumo_api import get_all_sw_characters, get_all_sw_characters_names
 
 # sw_data = get_all_sw_characters_names()
-sw_data = get_all_sw_characters()
+# sw_data = get_all_sw_characters()
 
-#! TIMSORT
-sw_data.sort(key=peso)
+# #! TIMSORT
+# sw_data.sort(key=peso)
 
 # buscado = 'Yoda'
 
@@ -55,10 +55,10 @@ sw_data.sort(key=peso)
 
 
 
-for character in sw_data:
-    if(character['mass'].isdecimal()):
-        if(int(character['mass']) >= 100):
-            print(character['name'], character['mass'])
+# for character in sw_data:
+#     if(character['mass'].isdecimal()):
+#         if(int(character['mass']) >= 100):
+#             print(character['name'], character['mass'])
     
     # print(character['name'])
     # print(character['name'], character['height'], character['mass'])
@@ -75,4 +75,27 @@ for character in sw_data:
 #! Mostrar toda la informacion del planeta Coruscant y Kamino
 #! Mostrar toda la informacion de las naves usadas por Luke Skywalker
 #! Mostarr toda las peliculas en las que aparecio R2-D2
-#! Mostrar el resumen de la introduccion (opening_crawl) del episodio 4 "A New Hope"    
+#! Mostrar el resumen de la introduccion (opening_crawl) del episodio 4 "A New Hope"   
+ 
+#! Calcular el promedio de altura de todos los personajes
+#! Calcular el peso promedio de los personajes especie humanos
+#! Contar cuantos personajes especie droides y humanos hay
+#! Listar todos los personajes que comienzan con C, L, A
+
+from consumo_api import get_all_sw_characters, get_charter_by_id
+
+sw_data = get_all_sw_characters()
+
+# for personaje in lista_personajes:
+    
+#     print(personaje)
+
+for character in sw_data:
+
+    if ("http://swapi.dev/api/species/32/" in character['species']):
+        print(character ["name"], character["species"])
+    elif ("http://swapi.dev/api/species/36/" in character['species']):
+        print(character ["name"], character["species"]) 
+
+# personaje = get_charter_by_id(20)
+# print(personaje)

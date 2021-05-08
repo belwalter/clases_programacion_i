@@ -3,6 +3,29 @@ import json
 import requests
 
 
+
+def consumo_api(id):
+    respuesta = requests.get('https://rickandmortyapi.com/api/character/'+str(id))
+    if respuesta.status_code == 200:
+        dic = json.loads(respuesta.text)
+        return dic
+
+
+# personaje = consumo_api(2)
+
+# print(personaje['name'],personaje['species'])
+# del personaje['episode']
+# personaje.pop('episode')
+# for clave in personaje.keys():
+#     if(clave == 'episode'):
+#         print(clave)
+#         for episode in personaje[clave]:
+#             print(episode)
+#     else:
+#         print(clave, personaje[clave])
+
+
+
 def get_docs(ruta):
     req = requests.get(ruta)
     # Imprimimos el resultado si el código de estado HTTP es 200 (OK):

@@ -27,11 +27,11 @@ def es_palindromo(cadena):
 
     return cadena_invertida == cadena
 
-def sumatoria(numero):
-    suma = 0
-    for i in range(1, numero+1):
-        suma += 1/i
-    return suma
+# def sumatoria(numero):
+#     suma = 0
+#     for i in range(1, numero+1):
+#         suma += 1/i
+#     return suma
 
 
 def cargar_datos():
@@ -70,3 +70,30 @@ def calculadora(numero1, operador, numero2):
 def es_vocal(caracter):
     vocales = ['a', 'e', 'i', 'o', 'u']
     return caracter.lower() in vocales
+
+
+def sumatoria(numero):
+    total = 0
+    for i in range(1, numero+1):
+        total += 1/i
+
+    return total
+
+# print(sumatoria(100))
+
+# for i in range(1,10+1):
+#     print(i)
+
+# num1 = int(input('ingrese un valor '))
+# operador = input('ingrese un operador ')
+# num2 = int(input('ingrese un valor '))
+
+# control = True
+
+# while(control):
+#     num1 = calculadora(num1, operador, num2)
+#     print(num1)
+#     operador = input('ingrese un operador ')
+#     if(operador == '?'):
+#         control = False
+#     num2 = int(input('ingrese un valor '))

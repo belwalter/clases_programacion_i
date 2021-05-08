@@ -79,3 +79,27 @@ if(key in dic):
     print(dic[key])
 else:
     print('la clave no esta')
+
+
+
+lista = [['lunes', 2], ['martes', 3], ['miercoles',0], ['jueves', 10], ['viernes',9]]
+        
+# for elemento in lista:
+#     print(elemento)
+#     if(2 in elemento):
+#         print(elemento.index(2))
+# print()
+# for i in range(0, len(lista)):
+#     if('lunes' in lista[i]):
+#         print(i, lista[i].index('lunes'))
+#     # print(lista[i])
+#     #print(lista[i].index())
+
+# dic = {1 : 'hola', 2:'chau', 'g' : "algo"}
+# clave = 'g'
+# if(clave in dic):
+#     print(dic[clave])
+# print(lista[3])
+
+# print(dic.get('a'))
+# print(dic.pop('g'))
