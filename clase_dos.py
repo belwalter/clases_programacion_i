@@ -202,29 +202,31 @@
 #             puntos += num3
 #     print('envido', puntos)
 
-num1 = int(input('ingrese un numero '))
-num2 = int(input('ingrese un numero '))
-num3 = int(input('ingrese un numero '))
-num4 = int(input('ingrese un numero '))
-num5 = int(input('ingrese un numero '))
+# num1 = int(input('ingrese un numero '))
+# num2 = int(input('ingrese un numero '))
+# num3 = int(input('ingrese un numero '))
+# num4 = int(input('ingrese un numero '))
+# num5 = int(input('ingrese un numero '))
 
 
-cantidad_multiplos_3 = 0 #! contador
+# cantidad_multiplos_3 = 0 #! contador
 
-if(num1 % 3 == 0):
-    cantidad_multiplos_3 += 1
+# if(num1 % 3 == 0):
+#     cantidad_multiplos_3 += 1
     
-if(num2 % 3 == 0):
-    cantidad_multiplos_3 += 1
+# if(num2 % 3 == 0):
+#     cantidad_multiplos_3 += 1
 
-if(num3 % 3 == 0):
-    cantidad_multiplos_3 += 1
+# if(num3 % 3 == 0):
+#     cantidad_multiplos_3 += 1
 
-if(num4 % 3 == 0):
-    cantidad_multiplos_3 += 1
+# if(num4 % 3 == 0):
+#     cantidad_multiplos_3 += 1
 
-if(num5 % 3 == 0):
-    cantidad_multiplos_3 += 1
+# if(num5 % 3 == 0):
+#     cantidad_multiplos_3 += 1
 
-print('cantidad de multiplos de 3', cantidad_multiplos_3)
+# print('cantidad de multiplos de 3', cantidad_multiplos_3)
 
+for i in zip(10):
+    print(i)

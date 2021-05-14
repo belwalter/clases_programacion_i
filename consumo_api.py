@@ -93,3 +93,9 @@ def get_planeta(url):
 #    for doc in dic["results"]:
 #        print(doc["name"], doc["url"][31:-1])
 #    dic = get_docs(dic["next"])
+
+from random import randint
+
+for i in range(10):
+    num = randint(1, 100)
+    print(num)
