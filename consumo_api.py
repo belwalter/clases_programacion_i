@@ -62,3 +62,7 @@ def search_plantes_by_name(name):
 def get_nave(url):
     data = get_docs(url)
     return data
+
+def get_film(url):
+    data = get_docs(url)
+    return data
