@@ -18,12 +18,10 @@ class Persona(object):
         self.__email = email
         self.__n_cuenta = n_cuenta
 
-    @property
     def email(self):
         return self.__mail
 
-    @email.setter
-    def email(self, mail):
+    def set_email(self, mail):
         """Cambia el valor del atributo mail."""
         self.__email = mail
 
@@ -44,11 +42,17 @@ class Persona(object):
         print(self.__apellido, self.__nombre, self.__email)
     
 
+# from consumo_api import get_charter_by_id
+
+# per1 = get_charter_by_id(20)
+
+# persona0 = Persona(per1['name'], per1['height'])
+
 persona1 = Persona('Perez', 'Maria', email='asdasd@asda.com')
 persona2 = Persona('Gonzalez', 'Maria', 23)
 persona3 = Persona('Caseres', 'Julieta')
 
-persona3.email = "123@123.com"
+persona3.set_email("123@123.com")
 
 persona1.mostrar_datos()
 persona2.mostrar_datos()
