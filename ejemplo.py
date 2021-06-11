@@ -32,7 +32,10 @@ class People(object):
     
     @homeworld.setter
     def homeworld(self, homeworld):
-        self.__homeworld = homeworld
+        if(isinstance(homeworld, Planet)):
+            self.__homeworld = homeworld
+        else:
+            print('el homeworld debe ser un objeto planet')
 
     def print_info(self):
         print(self.__name, self.__specie, self.__homeworld.name)
@@ -42,11 +45,12 @@ planet1_api = get_docs(people['homeworld'])
 
 planet = Planet(planet1_api['name'], planet1_api['climate'], planet1_api['diameter'])
 
-personaje = People(people['name'], get_docs(people['species'][0])['name'], planet)
+personaje = People(people['name'], get_docs(people['species'][0])['name'])
+personaje.homeworld = planet
 
 # planet.planet_info()
-# personaje.print_info()
+personaje.print_info()
 
-personaje.homeworld.planet_info()
+# personaje.homeworld.planet_info()
 
 #! class specie
