@@ -66,3 +66,7 @@ def get_nave(url):
 def get_film(url):
     data = get_docs(url)
     return data
+
+def get_specie(url):
+    data = get_docs(url)
+    return data

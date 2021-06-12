@@ -1,7 +1,18 @@
-from consumo_api import get_charter_by_id, get_docs
+from consumo_api import get_charter_by_id, get_docs, get_specie
 
 
-people = get_charter_by_id(79)
+people = get_charter_by_id(13) # 79
+
+
+class Specie(object):
+
+    def __init__(self, name, language, classification):
+        self.__name = name
+        self.__language = language
+        self.__classification = classification
+
+    def __str__(self):
+        return self.__name 
 
 
 class Planet(object):
@@ -18,6 +29,9 @@ class Planet(object):
     def name(self):
         return self.__name
 
+    def __str__(self):
+        return self.__name
+    
 
 class People(object):
 
@@ -37,20 +51,27 @@ class People(object):
         else:
             print('el homeworld debe ser un objeto planet')
 
+    @property
+    def specie(self):
+        return self.__specie
+
     def print_info(self):
-        print(self.__name, self.__specie, self.__homeworld.name)
+        print(self.__name, self.__specie, self.__homeworld)
 
 
 planet1_api = get_docs(people['homeworld'])
-
 planet = Planet(planet1_api['name'], planet1_api['climate'], planet1_api['diameter'])
+specie1_api = get_specie(people['species'][0])
+specie = Specie(specie1_api['name'], specie1_api['language'], specie1_api['classification'])
 
-personaje = People(people['name'], get_docs(people['species'][0])['name'])
-personaje.homeworld = planet
+personaje = People(people['name'], specie, planet)
+# personaje.homeworld = planet
 
 # planet.planet_info()
 personaje.print_info()
 
 # personaje.homeworld.planet_info()
+# personaje.specie.specie_info()
 
-#! class specie
+print(personaje.specie)
+print(personaje.homeworld)
